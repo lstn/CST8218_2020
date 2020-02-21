@@ -28,7 +28,7 @@ import javax.ws.rs.core.MediaType;
 @Path("cst8218.esti0011.entity.sprite")
 public class SpriteFacadeREST extends AbstractFacade<Sprite> {
 
-    @PersistenceContext(unitName = "SpriteLucas-warPU")
+    @PersistenceContext(unitName = "SpriteLucas-ejbPU")
     private EntityManager em;
 
     public SpriteFacadeREST() {

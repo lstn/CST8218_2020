@@ -3,7 +3,7 @@ package cst8218.esti0011.web;
 import cst8218.esti0011.entity.Sprite;
 import cst8218.esti0011.web.util.JsfUtil;
 import cst8218.esti0011.web.util.PaginationHelper;
-import cst8218.esti0011.sb.SpriteFacade;
+import cst8218.esti0011.entity.SpriteFacade;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
@@ -25,7 +25,7 @@ public class SpriteController implements Serializable {
     private Sprite current;
     private DataModel items = null;
     @EJB
-    private cst8218.esti0011.sb.SpriteFacade ejbFacade;
+    private cst8218.esti0011.entity.SpriteFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 

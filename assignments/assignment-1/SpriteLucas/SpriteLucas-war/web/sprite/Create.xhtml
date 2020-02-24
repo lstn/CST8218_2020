@@ -28,7 +28,7 @@
                     <h:outputLabel value="#{bundle.CreateSpriteLabel_dy}" for="dy" />
                     <h:inputText id="dy" value="#{spriteController.selected.dy}" title="#{bundle.CreateSpriteTitle_dy}" />
                     <h:outputLabel value="#{bundle.CreateSpriteLabel_color}" for="color" />
-                    <h:inputText id="color" value="#{spriteController.selected.color}" title="#{bundle.CreateSpriteTitle_color}" />
+                    <h:inputText class="jscolor" id="color" value="#{spriteController.selected.color}" title="#{bundle.CreateSpriteTitle_color}" />
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{spriteController.create}" value="#{bundle.CreateSpriteSaveLink}" />

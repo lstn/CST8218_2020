@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cst8218.esti0011.util;
+
+
+import java.awt.Color;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.FacesValidator;
+import javax.faces.validator.Validator;
+import javax.faces.validator.ValidatorException;
+
+/**
+ *
+ * @author lucas.estienne
+ */
+@FacesValidator("cst8218.esti0011.util.ColorValidator")
+public class ColorValidator implements Validator {
+    
+    private static final String HEX_COLORCODE_PATTERN = "^[A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}$";
+    
+    private Pattern pattern;
+    private Matcher matcher;
+    
+    public ColorValidator(){
+        pattern = Pattern.compile(HEX_COLORCODE_PATTERN);
+    }
+    
+    @Override
+    public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
+        Color color = (Color) value;
+        String hs = Integer.toHexString(color.getRGB()).substring(2);
+        matcher = pattern.matcher(hs);
+        if(!matcher.matches()){
+            FacesMessage msg = new FacesMessage("Color validation failed.", "Must be a valid Hex color code (pound sign ommitted, i.e. 'FFFFFF').");
+            msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+            throw new ValidatorException(msg);
+        }
+
+    }
+}

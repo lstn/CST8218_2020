@@ -1,4 +1,4 @@
-package cst8218.esti0011.web.util;
+package cst8218.esti0011.util;
 
 import javax.faces.model.DataModel;
 

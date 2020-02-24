@@ -1,8 +1,8 @@
 package cst8218.esti0011.web;
 
 import cst8218.esti0011.entity.Sprite;
-import cst8218.esti0011.web.util.JsfUtil;
-import cst8218.esti0011.web.util.PaginationHelper;
+import cst8218.esti0011.util.JsfUtil;
+import cst8218.esti0011.util.PaginationHelper;
 import cst8218.esti0011.entity.SpriteFacade;
 
 import java.io.Serializable;

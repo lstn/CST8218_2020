@@ -33,10 +33,18 @@ public class ColorValidator implements Validator {
     private Pattern pattern;
     private Matcher matcher;
     
+    /** Constructor for ColorValidator.
+     * Assigns the pattern variable with the compiled regex for a hex color code.
+     */
     public ColorValidator(){
         pattern = Pattern.compile(HEX_COLORCODE_PATTERN);
     }
     
+    /** Perform the correctness checks for the Color input string.
+     * @param context FacesContext for the request being processed
+     * @param component UIComponent we are checking for correctness
+     * @param value the value to validate
+     */
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         Color color = (Color) value;

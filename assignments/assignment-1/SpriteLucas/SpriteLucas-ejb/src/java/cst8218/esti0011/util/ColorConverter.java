@@ -23,11 +23,22 @@ import javax.faces.convert.FacesConverter;
  */
 @FacesConverter("cst8218.esti0011.util.ColorConverter")
 public class ColorConverter implements Converter {
+    /** Convert the specified string value into a Color object.
+     * @param context FacesContext for the request being processed
+     * @param component UIComponent with which this model object value is associated
+     * @param value String value to be converted
+     * @return an Object containing the result of the conversion
+     */
     @Override
     public Object getAsObject(FacesContext context, UIComponent component, String value) {
         return Color.decode("#"+value);
     }
-    
+    /** Convert the specified Color object into a String.
+     * @param context FacesContext for the request being processed
+     * @param component UIComponent with which this model object value is associated
+     * @param value Model object value to be converted 
+     * @return a String containing the result of the conversion
+     */
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
         Color color = (Color) value;

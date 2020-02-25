@@ -49,7 +49,7 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
         super.create(entity);
     }
 
-    /** REST Method to update a Sprite.
+    /** REST Method to update a Sprite by ID.
      * PUT <base-url>/resources/cst8218.esti0011.entity.sprite/<id>
      * @param id The ID of the Sprite to update
      * @param entity The updated Sprite entity

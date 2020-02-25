@@ -14,8 +14,12 @@ import javax.faces.convert.ConverterException;
 import javax.faces.convert.FacesConverter;
 
 /**
- *
+ * Custom converter for our JSF Color inputs.
+ * Converts string hexadecimal color representations to and from {@link java.awt.Color} objects.
  * @author lucas.estienne
+ * @version 1.0
+ * @since 1.0
+ * @see java.awt.Color
  */
 @FacesConverter("cst8218.esti0011.util.ColorConverter")
 public class ColorConverter implements Converter {

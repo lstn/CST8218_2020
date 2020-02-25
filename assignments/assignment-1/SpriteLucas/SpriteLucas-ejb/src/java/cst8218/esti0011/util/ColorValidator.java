@@ -18,9 +18,12 @@ import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
 
 /**
- *
+ * Custom validator for our JSF Color inputs.
+ * Validates that input strings match the regex for HEX color codes, minus the pound sign (#).
  * @author lucas.estienne
  * @version 1.0
+ * @since 1.0
+ * @see java.awt.Color
  */
 @FacesValidator("cst8218.esti0011.util.ColorValidator")
 public class ColorValidator implements Validator {

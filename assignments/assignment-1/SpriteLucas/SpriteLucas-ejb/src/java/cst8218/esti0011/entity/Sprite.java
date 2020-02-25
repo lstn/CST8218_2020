@@ -17,8 +17,11 @@ import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
+ * Sprite Class, defines the properties of our sprites, such as
+ * position, color, width, height, etc.
  * @author tgk
+ * @version 1.0
+ * @since 1.0
  */
 @Entity
 @XmlRootElement

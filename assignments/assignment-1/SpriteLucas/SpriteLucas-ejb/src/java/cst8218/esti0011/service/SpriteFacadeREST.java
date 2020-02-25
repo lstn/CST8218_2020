@@ -21,8 +21,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- *
+ * Facade for our REST service. Extends AbstractFacade.
+ * Sets our persistence context and defines our endpoints.
  * @author lucas.estienne
+ * @version 1.0
+ * @since 1.0
  */
 @Stateless
 @Path("cst8218.esti0011.entity.sprite")

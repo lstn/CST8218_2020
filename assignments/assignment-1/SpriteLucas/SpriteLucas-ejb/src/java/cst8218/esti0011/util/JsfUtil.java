@@ -12,6 +12,12 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.model.SelectItem;
 
+/**
+ * A utility to help deal with common tasks in JSF.
+ * @author lucas.estienne
+ * @version 1.0
+ * @since 1.0
+ */
 public class JsfUtil {
 
     public static SelectItem[] getSelectItems(List<?> entities, boolean selectOne) {

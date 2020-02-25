@@ -8,9 +8,11 @@ package cst8218.esti0011.entity;
 import java.util.List;
 import javax.persistence.EntityManager;
 
-/**
- *
+/** 
+ * Abstract Facade for Sprite beans
  * @author tgk
+ * @version 1.0
+ * @since 1.0
  */
 public abstract class AbstractFacade<T> {
     private Class<T> entityClass;

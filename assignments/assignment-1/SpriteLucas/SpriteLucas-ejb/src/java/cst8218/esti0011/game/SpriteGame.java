@@ -15,8 +15,10 @@ import javax.ejb.EJB;
 import javax.ejb.Singleton;
 
 /**
- *
+ * SpriteGame, contains the logic for our game.
  * @author tgk
+ * @version 1.0
+ * @since 1.0
  */
 @Singleton
 public class SpriteGame {

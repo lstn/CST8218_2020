@@ -9,8 +9,10 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 /**
- *
+ * Abstract Facade for our REST service beans
  * @author lucas.estienne
+ * @version 1.0
+ * @since 1.0
  */
 public abstract class AbstractFacade<T> {
 

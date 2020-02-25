@@ -7,6 +7,12 @@ package cst8218.esti0011.util;
 
 import javax.faces.model.DataModel;
 
+/**
+ * Class to help pagination for JSF.
+ * @author lucas.estienne
+ * @version 1.0
+ * @since 1.0
+ */
 public abstract class PaginationHelper {
 
     private int pageSize;

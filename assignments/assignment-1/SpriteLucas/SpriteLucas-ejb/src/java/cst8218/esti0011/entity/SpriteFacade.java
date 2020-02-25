@@ -10,8 +10,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
+ * Facade for our Sprite. Extends AbstractFacade.
+ * Sets our persistence context.
  * @author tgk
+ * @version 1.0
+ * @since 1.0
  */
 @Stateless
 public class SpriteFacade extends AbstractFacade<Sprite> {

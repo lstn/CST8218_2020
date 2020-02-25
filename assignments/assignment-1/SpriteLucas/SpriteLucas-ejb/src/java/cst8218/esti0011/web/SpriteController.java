@@ -23,6 +23,12 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
+/**
+ * Controller class for our CRUD JSF pages.
+ * @author lucas.estienne
+ * @version 1.0
+ * @since 1.0
+ */
 @Named("spriteController")
 @SessionScoped
 public class SpriteController implements Serializable {

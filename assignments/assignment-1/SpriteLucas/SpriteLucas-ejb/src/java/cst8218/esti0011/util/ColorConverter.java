@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CST8218 Assignment 1
+ * Author: Lucas Estienne <esti0011@algonquinlive.com>
+ * 2020W Term
  */
 package cst8218.esti0011.util;
 

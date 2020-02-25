@@ -38,6 +38,10 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
         super(Sprite.class);
     }
 
+    /** REST Method to create a Sprite.
+     * POST <base-url>/resources/cst8218.esti0011.entity.sprite
+     * @param entity The Sprite to create
+     */
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -45,6 +49,11 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
         super.create(entity);
     }
 
+    /** REST Method to update a Sprite.
+     * PUT <base-url>/resources/cst8218.esti0011.entity.sprite/<id>
+     * @param id The ID of the Sprite to update
+     * @param entity The updated Sprite entity
+     */
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -52,12 +61,21 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
         super.edit(entity);
     }
 
+    /** REST Method to delete a Sprite.
+     * DELETE <base-url>/resources/cst8218.esti0011.entity.sprite/<id>
+     * @param id The ID of the Sprite to delete
+     */
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
     }
-
+    
+    /** REST Method to get a Sprite by ID.
+     * GET <base-url>/resources/cst8218.esti0011.entity.sprite/<id>
+     * @param id The ID of the Sprite to get
+     * @return A Sprite object matching the ID.
+     */
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -65,6 +83,10 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
         return super.find(id);
     }
 
+    /** REST Method to get a list of all Sprites.
+     * GET <base-url>/resources/cst8218.esti0011.entity.sprite
+     * @return a List of all Sprite objects
+     */
     @GET
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -72,6 +94,12 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
         return super.findAll();
     }
 
+    /** REST Method to get a list of Sprites in a range of IDs
+     * GET <base-url>/resources/cst8218.esti0011.entity.sprite/<from>/<to>
+     * @param from The first ID in the range of Sprites
+     * @param to The last ID in the range of Sprites
+     * @return a List of Sprite objects matching the range of IDs provided
+     */
     @GET
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
@@ -79,6 +107,10 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
         return super.findRange(new int[]{from, to});
     }
 
+    /** REST Method to get the count of Sprites
+     * GET <base-url>/resources/cst8218.esti0011.entity.sprite/count
+     * @return a String representing the count of Sprites
+     */
     @GET
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)

@@ -1,5 +1,5 @@
 /*
- * CST8218 Assignment 1
+ * CST8218 Assignment 2
  * Author: Lucas Estienne <esti0011@algonquinlive.com>
  * 2020W Term
  */
@@ -26,7 +26,7 @@ import javax.ws.rs.core.MediaType;
  * Facade for our REST service. Extends AbstractFacade.
  * Sets our persistence context and defines our endpoints.
  * @author lucas.estienne
- * @version 1.0
+ * @version 2.0
  * @since 1.0
  */
 @Stateless

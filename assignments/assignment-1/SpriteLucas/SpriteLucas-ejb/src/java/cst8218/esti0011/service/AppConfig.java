@@ -1,6 +1,7 @@
 /*
+ * CST8218 Assignment 2
  * Author: Lucas Estienne <esti0011@algonquinlive.com>
- * For CST8218, 2020W
+ * 2020W Term
  */
 package cst8218.esti0011.service;
 
@@ -21,7 +22,7 @@ import javax.ws.rs.core.Application;
 
 
 /**
- *
+ * Application scoped bean to implement security
  * @author lucas.estienne
  */
 @BasicAuthenticationMechanismDefinition

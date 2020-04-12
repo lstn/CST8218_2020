@@ -1,3 +1,8 @@
+/*
+ * CST8218 Assignment 2
+ * Author: Lucas Estienne <esti0011@algonquinlive.com>
+ * 2020W Term
+ */
 package cst8218.esti0011.web;
 
 import cst8218.esti0011.entity.AppUser;
@@ -18,6 +23,12 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
+/**
+ * Controller class for our CRUD JSF pages.
+ * @author lucas.estienne
+ * @version 1.0
+ * @since 1.0
+ */
 @Named("appUserController")
 @SessionScoped
 public class AppUserController implements Serializable {

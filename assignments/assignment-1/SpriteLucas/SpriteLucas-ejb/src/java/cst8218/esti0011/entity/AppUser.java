@@ -18,8 +18,11 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
+ * Facade for our AppUser. Extends AbstractFacade.
+ * Sets our persistence context.
  * @author lucas.estienne
+ * @version 1.0
+ * @since 1.0
  */
 @Entity
 @Table(name = "APPUSER")

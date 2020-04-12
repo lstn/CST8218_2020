@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "51561111-a138-4aaa-87a1-93b2e767516c",
+		"name": "CST8218 Sprite API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Sprite",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dx\": 3,\n    \"dy\": 5,\n    \"id\": 59,\n    \"panelHeight\": 500,\n    \"panelWidth\": 500,\n    \"x\": 291,\n    \"y\": 165\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/resources/cst8218.esti0011.entity.sprite",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"resources",
+						"cst8218.esti0011.entity.sprite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Sprites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/resources/cst8218.esti0011.entity.sprite",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"resources",
+						"cst8218.esti0011.entity.sprite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sprite Range",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/resources/cst8218.esti0011.entity.sprite/0/3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"resources",
+						"cst8218.esti0011.entity.sprite",
+						"0",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sprite Count",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/resources/cst8218.esti0011.entity.sprite/count",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"resources",
+						"cst8218.esti0011.entity.sprite",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sprite by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/resources/cst8218.esti0011.entity.sprite/101",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"resources",
+						"cst8218.esti0011.entity.sprite",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Sprite by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dx\": 1,\n    \"dy\": 2,\n    \"panelHeight\": 250,\n    \"panelWidth\": 250,\n    \"x\": 123,\n    \"y\": 321\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/resources/cst8218.esti0011.entity.sprite/59",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"resources",
+						"cst8218.esti0011.entity.sprite",
+						"59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Sprite by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/resources/cst8218.esti0011.entity.sprite/59",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"resources",
+						"cst8218.esti0011.entity.sprite",
+						"59"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "test",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "tester",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3fedb04e-bc77-4174-882a-57687084b6c7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cdffe831-34bb-4848-bcba-2332ae6c5512",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d3108bc7-adf6-4428-84f6-e280a172cb4a",
+			"key": "base_url",
+			"value": "http://localhost:8080/SpriteLucas-war",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

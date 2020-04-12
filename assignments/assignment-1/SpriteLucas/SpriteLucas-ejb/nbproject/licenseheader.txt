@@ -1,8 +1,0 @@
-<#if licenseFirst??>
-${licenseFirst}
-</#if>
-${licensePrefix}Author: Lucas Estienne <esti0011@algonquinlive.com>
-${licensePrefix}For CST8218, 2020W
-<#if licenseLast??>
-${licenseLast}
-</#if>

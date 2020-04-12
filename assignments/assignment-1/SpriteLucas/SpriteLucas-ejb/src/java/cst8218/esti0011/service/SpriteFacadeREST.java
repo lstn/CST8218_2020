@@ -7,6 +7,8 @@ package cst8218.esti0011.service;
 
 import cst8218.esti0011.entity.Sprite;
 import java.util.List;
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,6 +30,7 @@ import javax.ws.rs.core.MediaType;
  * @since 1.0
  */
 @Stateless
+@DeclareRoles({"Admin","RestGroup"})
 @Path("cst8218.esti0011.entity.sprite")
 public class SpriteFacadeREST extends AbstractFacade<Sprite> {
 
@@ -43,6 +46,7 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
      * @param entity The Sprite to create
      */
     @POST
+    @RolesAllowed({"Admin","RestGroup"})
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public void create(Sprite entity) {
@@ -55,6 +59,7 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
      * @param entity The updated Sprite entity
      */
     @PUT
+    @RolesAllowed({"Admin","RestGroup"})
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public void edit(@PathParam("id") Long id, Sprite entity) {
@@ -66,6 +71,7 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
      * @param id The ID of the Sprite to delete
      */
     @DELETE
+    @RolesAllowed({"Admin","RestGroup"})
     @Path("{id}")
     public void remove(@PathParam("id") Long id) {
         super.remove(super.find(id));
@@ -77,6 +83,7 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
      * @return A Sprite object matching the ID.
      */
     @GET
+    @RolesAllowed({"Admin","RestGroup"})
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Sprite find(@PathParam("id") Long id) {
@@ -88,6 +95,7 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
      * @return a List of all Sprite objects
      */
     @GET
+    @RolesAllowed({"Admin","RestGroup"})
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Sprite> findAll() {
@@ -101,6 +109,7 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
      * @return a List of Sprite objects matching the range of IDs provided
      */
     @GET
+    @RolesAllowed({"Admin","RestGroup"})
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Sprite> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
@@ -112,6 +121,7 @@ public class SpriteFacadeREST extends AbstractFacade<Sprite> {
      * @return a String representing the count of Sprites
      */
     @GET
+    @RolesAllowed({"Admin","RestGroup"})
     @Path("count")
     @Produces(MediaType.TEXT_PLAIN)
     public String countREST() {

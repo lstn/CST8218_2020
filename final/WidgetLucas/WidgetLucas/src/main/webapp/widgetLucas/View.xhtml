@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewWidgetLucasTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewWidgetLucasLabel_id}"/>
+                    <h:outputText value="#{widgetLucasController.selected.id}" title="#{bundle.ViewWidgetLucasTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewWidgetLucasLabel_name959}"/>
+                    <h:outputText value="#{widgetLucasController.selected.name959}" title="#{bundle.ViewWidgetLucasTitle_name959}"/>
+                    <h:outputText value="#{bundle.ViewWidgetLucasLabel_quantity959}"/>
+                    <h:outputText value="#{widgetLucasController.selected.quantity959}" title="#{bundle.ViewWidgetLucasTitle_quantity959}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{widgetLucasController.destroyAndView}" value="#{bundle.ViewWidgetLucasDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewWidgetLucasEditLink}"/>
+                <br />
+                <h:commandLink action="#{widgetLucasController.prepareCreate}" value="#{bundle.ViewWidgetLucasCreateLink}" />
+                <br />
+                <h:commandLink action="#{widgetLucasController.prepareList}" value="#{bundle.ViewWidgetLucasShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewWidgetLucasIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

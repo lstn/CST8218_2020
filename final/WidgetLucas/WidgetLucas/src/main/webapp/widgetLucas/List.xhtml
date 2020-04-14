@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListWidgetLucasTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListWidgetLucasEmpty}" rendered="#{widgetLucasController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{widgetLucasController.items.rowCount > 0}">
+                    <h:outputText value="#{widgetLucasController.pagination.pageFirstItem + 1}..#{widgetLucasController.pagination.pageLastItem + 1}/#{widgetLucasController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{widgetLucasController.previous}" value="#{bundle.Previous} #{widgetLucasController.pagination.pageSize}" rendered="#{widgetLucasController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{widgetLucasController.next}" value="#{bundle.Next} #{widgetLucasController.pagination.pageSize}" rendered="#{widgetLucasController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{widgetLucasController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListWidgetLucasTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListWidgetLucasTitle_name959}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name959}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListWidgetLucasTitle_quantity959}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.quantity959}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{widgetLucasController.prepareView}" value="#{bundle.ListWidgetLucasViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{widgetLucasController.prepareEdit}" value="#{bundle.ListWidgetLucasEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{widgetLucasController.destroy}" value="#{bundle.ListWidgetLucasDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{widgetLucasController.prepareCreate}" value="#{bundle.ListWidgetLucasCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListWidgetLucasIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
